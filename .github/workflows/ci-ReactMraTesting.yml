@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.CR_USERNAME }}
           password: ${{ secrets.CR_PASSWORD }}
       - name: Build and Test
-        run: docker build ${{ env.DOCKER_BUILD_CONTEXT }} -f ${{ env.DOCKER_BUILD_FILE_PATH }} -t ${{ secrets.CR_LOGIN_SERVER }}/${{ env.REPOSITORY_NAME }}:reactbuildmra
+        run: docker build ${{ env.DOCKER_BUILD_CONTEXT }} -f ${{ env.DOCKER_BUILD_FILE_PATH }} -t ${{ secrets.CR_LOGIN_SERVER }}/${{ env.REPOSITORY_NAME }}:${{ github.run_number }}
       - name: Runs docker
         run: docker run --name ${{ env.CONTAINER_NAME }} -d ${{ secrets.CR_LOGIN_SERVER }}/${{ env.REPOSITORY_NAME }}:reactbuildmra
       - name: copy build files
