@@ -19,7 +19,7 @@ name: cd-ReactMraTesting
     types:
       - completed
 env:
-  REPOSITORY_NAME: TestingRepoReact
+  REPOSITORY_NAME: reactbuildmra
 jobs:
   set-environment:
     runs-on: ubuntu-latest
