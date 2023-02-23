@@ -5,7 +5,6 @@ import {
     BrowserRouter as Router,
   } from "react-router-dom";
 
-//hello
   
 test('should render App Component and match the project name', async () => {
     render(<Router ><App /></Router>)
